@@ -1,4 +1,4 @@
-from . import views
+#from . import views
 """training_courses URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
