@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!--
+<img src="{% static "img/allegra_2015.jpg" %}" alt="My image"/>
+--!>
+
+<html>
+    <head>
+        <title>ELIXIR-ITA bioinformatics training courses</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Corbel&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/elixir_ita.css' %}" type="text/css">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/"> ELIXIR-ITA bioinformatics training courses 2015</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+<!--
+                <div class="col-md-8">         
+--!>
+                {% block content %}
+                {% endblock %}
+                </div>
+            </div>
+<!--
+        </div>
+--!>
+    </body>
+</html>
+
