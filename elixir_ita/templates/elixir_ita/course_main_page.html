@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>ELIXIR-ITA bioinformatics training courses</title>
+    </head>
+    <body>
+        <div>
+            <h1>ELIXIR-ITA bioinformatics training courses 2015</h1>
+        </div>
+
+        {% for course in courses %}
+    
+        <div>
+            <ul>
+                <li>
+                    <h3><a href="">{{ course.title }}</a></h3>
+                    <p>{{ course.venue }}</p>
+                    <p>{{ course.data }}</p>    
+                    <p>{{ course.text|linebreaks }}</p>    
+                </li>
+            </ul>
+        </div>
+
+        {% endfor %}
+    </body>
+</html>
+

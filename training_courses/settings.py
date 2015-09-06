@@ -51,8 +51,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-#ROOT_URLCONF = 'training_courses.urls'
-ROOT_URLCONF = 'elixir_ita.urls'
+ROOT_URLCONF = 'training_courses.urls'
+#ROOT_URLCONF = 'elixir_ita.urls'
 
 TEMPLATES = [
     {

@@ -18,6 +18,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^$', views.welcome, name='welcome'),
+#    url(r'^$', views.welcome, name='welcome'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'', include('elixir_ita.urls')),
 ]

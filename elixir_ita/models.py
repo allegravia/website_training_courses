@@ -5,7 +5,9 @@ from django.utils import timezone
 
 class Course(models.Model):
     author = models.ForeignKey('auth.User')
-    title = models.CharField(max_length=400)
+    title = models.CharField(max_length=400, null=True)
+    venue = models.CharField(max_length=200, null=True)
+    data = models.CharField(max_length=100, null=True)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
