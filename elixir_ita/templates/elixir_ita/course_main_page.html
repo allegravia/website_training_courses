@@ -1,20 +1,29 @@
+{% load staticfiles %}
+<!--
+<img src="{% static "img/allegra_2015.jpg" %}" alt="My image"/>
+--!>
+
 <html>
     <head>
         <title>ELIXIR-ITA bioinformatics training courses</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="http://fonts.googleapis.com/css?family=Corbel&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/elixir_ita.css' %}" type="text/css">
     </head>
     <body>
         <div>
-            <h1>ELIXIR-ITA bioinformatics training courses 2015</h1>
+        <div class="page-header">
+            <h1><a href="/"> ELIXIR-ITA bioinformatics training courses 2015</a></h1>
         </div>
 
         {% for course in courses %}
-    
-        <div>
+        <div class="course">
             <ul>
                 <li>
                     <h3><a href="">{{ course.title }}</a></h3>
-                    <p>{{ course.venue }}</p>
-                    <p>{{ course.data }}</p>    
+                    <p>{{ course.venue }} - 
+                       {{ course.data }}</p>    
                     <p>{{ course.text|linebreaks }}</p>    
                 </li>
             </ul>
