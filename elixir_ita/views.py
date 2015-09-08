@@ -13,3 +13,11 @@ def course_main_page(request):
 def course_detail(request, pk):
     course = get_object_or_404(Course, pk=pk)
     return render(request, 'elixir_ita/course_detail_'+pk+'.html', {'course': course})
+
+def application(request, pk):
+    course = get_object_or_404(Course, pk=pk)
+    return render(request, 'elixir_ita/application.html', {'course': course})
+
+def programme(request, pk):
+    course = get_object_or_404(Course, pk=pk)
+    return render(request, 'elixir_ita/programme_'+pk+'.html', {'course': course})

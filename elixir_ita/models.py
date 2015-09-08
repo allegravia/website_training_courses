@@ -6,6 +6,7 @@ from django.utils import timezone
 class Course(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=400, null=True)
+    code = models.CharField(max_length=20, null=True)
     venue = models.CharField(max_length=200, null=True)
     data = models.CharField(max_length=100, null=True)
     text = models.TextField()
