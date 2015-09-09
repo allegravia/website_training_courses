@@ -159,13 +159,6 @@
 		</tr>
 		<tr>
 		    <td>
-		    <div class="course">	
-			<h4><a href="{% url "programme" pk=course.pk %}">Course detailed programme</a></h4>
-		    </div>
-		    </td>
-		</tr>
-		<tr>
-		    <td>
 			<p align="justify">
 			<b>Target audience</b>: students and researchers with low or no previous experience in 
 			RNA-seq data analysis with background in biology or computer science who are working or planning to work on RNA-seq.
@@ -202,6 +195,7 @@
 		<tr>
 		    <td>
 			<div class="course">	
+			    <h4><a href="{% url "programme" pk=course.pk %}">Course detailed programme</a></h4>
 			    <h4><a href="{% url "application" pk=course.pk %}">Application</a></h4>
 			</div> 
 		    </td>	
@@ -231,149 +225,3 @@
     </div>
 
 {% endblock content %}
-
-<!--
-            <p><b>{{ course.venue }} - {{ course.data }}</b></p>  
-             
-        </div>
-
-
-
-<table width="910" align="center">
-<font size="2">
-<tr><td>
-<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT DATES</b> for this Course
-<br />&nbsp;&nbsp;&nbsp;Deadline for applications: <b>July 10th 2015 <---- NEW!</b>
-<br />&nbsp;&nbsp;&nbsp;Latest notification of acceptance: <b>July 10th 2015</b>
-<br />&nbsp;&nbsp;&nbsp;Course date: <b> July 20th -  July 24th 2015</b>
-</p>
-<p><b>Candidates with adequate profile will be accepted in the next 72 hours after the application until we reach 20 participants.
-</td></tr>
-</font>
-</table>
-
-
-
-	<table width="910" align="center" border="1">
-		<tbody>
-			<tr>
-				<td><h2>Instructors:</h2></td>
-			</tr>
-
-			<tr>
-				<td>
-					<img border="0" style="margin:4px" src="http://gtpb.igc.gulbenkian.pt/bicourses/images/Allegra_Via_2015.jpg" width="91" align="left">
-					<font size="2">
-						<p align="justify">
-							<b>Allegra Via</b> is a physicist and scientific researcher in the Biocomputing Unit of Sapienza
-							Universit&agrave; (Roma, IT) where she also teaches Macromolecular Structure, Python programming, 
-							Bioinformatics and Biochemistry. Her main research interests include protein structural 
-							bioinformatics, protein function prediction and analysis, and protein interactions, though recently 
-							she started projects on DNA methylation and protein-Â­RNA interactions. On top of her research 
-							activities, she is strongly involved in the design and delivery of bioinformatics training courses 
-							on Python programming for life scientists. She is the Training Coordinator for <b>ELIXIR Italy</b>, 
-							the <b>ELIXIR.ITA</b> local technical coordinator for Sapienza Universit&agrave;, and a member of the Global 
-							Organisation for Bioinformatics Learning, Education and Training, <b>GOBLET</b>. She has created the first 
-							Python course in <b>GTPB</b> in 2010 and has been an instructor in all the editions od BPB ever since. In 2014, 
-							she co-authored "Managing your biological data with Python", a book that budded from her experience 
-							as a training designer and as an instructor.
-							<br>
-							<br>
-							<b>Affiliation: </b>Sapienza Universit&agrave;, Roma, IT
-						</p>
-					</font>
-				</td>
-			</tr>
-
-			<tr>
-				<td>
-					<img border="0" style="margin:4px" src="http://gtpb.igc.gulbenkian.pt/bicourses/images/Kaja_Milanowska_2014.jpg" width="91" align="left">
-					<font size="2">
-						<p align="justify">
-							<b>Kaja Milanowska</B> graduated bioinformatics at Adam Mickiewicz University in Pozna&nacute;. 
-							During her PhD research in Bioinformatics Laboratory, she worked mainly on the development of new biological 
-							databases, analysis of RNA maturation and degradation pathways and on pathways of DNA repair. She is an expert 
-							in the field of programming web applications in Django (she already has coached in two Django Girls meetings). 
-							She is interested in further education in the field of computer science (mainly web design, web applications, 
-							databases and Python programming). Currently she works at the Department of Gene Expression, Adam Mickiewicz 
-							University in Poznan dealing with the data from Next Generation Sequencing. From July Kaja is starting to work 
-							in two new projects at the Department of Molecular and Systems Biology, Polish Academy of Sciences in Warsawa. 
-							In addition to her scientific research activity, Kaja also cooperates with non-profit organizations such as 
-							<b>PyLadies Poland</b> or <b>Geek Girls Carrots</b>. She is actively working in the popularization of programming, 
-							mainly among women. At the latest <b>Geek Girls Carrots</b> meeting, in May 2015, she gave 2 presentations. Kaja  
-							was a co-founder of <b>PyLadies Poland</b> and has been a sopporter of that community in Poland, co-organizing 
-							meetings, teaching, mentoring or delivering seminars. <b>PyLadies</b> is a worldwide organisation that aims at 
-							making the Python community more diverse, especially by making it more friendly and welcoming for women. In her 
-							spare time, she keen on practising highly energetc sports - her passion is running (half-marathons, marathons,  
-							orienteering), alongside with hiking in the mountains and mountain-biking. 
-							<br>
-							<br>
-							<b>Affiliation:</b> Polish Academy of Sciences, Department of Molecular and Systems Biology, Pozna&nacute;, PL
-						</p>
-					</font>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-	<table width="910" align="center" border="1">
-		<tbody>
-			<tr>
-				<td>
-					<h2>Course Description</h2>
-<b>Python</b> is an object-oriented programming language that is ideal for biological data analysis. The course will start from zero knowledge, and will introduce 
-the participants to all the basic concepts of Python such as calculating, organizing data, reading and writing files, program logic and writing larger programs. All 
-the examples and practical sessions will focus on solving biological problems.
-
-In particular the sessions will cover:<br>
-<ul>
-<li>working with DNA and protein sequences</li>
-<li>data retrieval from files and their manipulation</li>
-<li>running applications, such as BLAST, locally and from a script</li>
-<li>finding motifs in sequence</li>
-<li>parsing common file formats (Uniprot, GenBank, PDB, BLAST) with Biopython</li>
-<li>ways to find and correct program errors</li>
-</ul>
-The course will be highly interactive and the students will continuously put theory into practice while learning. By the end of the course, the participants will have a good understanding of Python basics and will have acquired the skills to manage any type of bioinformatics database record and to run applications from scripts. Basic Unix/Linux skills will be provided at the beginning of the course.
-Target Audience
-End-users of bioinformatics databases and tools that aim at developing hands-on capabilities for biological data analysis, ie writing their own or adapting somebody else's Python scripts in an autonomous way.
-Course Pre-requisites
-Basic familiarity with bioinformatics data resources such as Uniprot/Swiss-Prot, Blast, ENSEMBL, PDB, etc. The course is directed to biologists with little or no programming experience and aims at making them capable to use Python to autonomously manage and analyse biological data.
-
-					
-
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-
-<table width="910" align="center" >
-<tr><td>
-<br /><a href="./Application.html"><b>Application</b></a>
-</td></tr>
-
-<tr><td>
-<br /><a href="./timetable.html"><b>Detailed Program </b></a>
-</td></tr>
-</table>
-
-
-<table width="910" align="center">
-<tr><td>
-
-<p>
-Instituto Gulbenkian de Ci&ecirc;ncia,</p>
-<p>
-Apartado 14, 2781-901 Oeiras, Portugal</p>
-<p><a href="http://gtpb.igc.gulbenkian.pt/bicourses">GTPB Homepage</a></p>
-<p><a href="http://www.igc.gulbenkian.pt">IGC Homepage</a></p>
-<p>Last updated:&nbsp;&nbsp;<i><b>May 25th 2015</b></i></p>
-</td></tr>
-</table>
-</body>
-
-</html>
-
---!>
-
