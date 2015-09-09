@@ -1,57 +1,243 @@
 {% extends "elixir_ita/base.html" %}
 
+{% load staticfiles %}
+
 {% block content %}
-        <div class="course">
-            <h3>{{ course.title }}</h3>
-            <p>{{ course.venue }} - 
-            {{ course.data }}</p>    
-            <h4><a href="{% url "application" pk=course.pk %}">Application</a></h4>
-            <h4><a href="{% url "programme" pk=course.pk %}">Programme</a></h4>
-	<h4><a href="{% url "course_detail" pk=course.pk %}">Course Homepage</a></h4>
-        </div>
+
+    <div class="table">
+        <table width="910" align="center">
+		<tr>
+		    <td>
+			<img src="{% static "img/elixir_ita_logo.jpg" %}" style="height:10%" alt="elixir_ita_logo"/>
+			<img src="{% static "img/cineca_logo.jpg" %}" style="height:20%" align="right" alt="cineca_logo"/>
+			<img src="{% static "img/sapienza_logo.jpg" %}" style="height:20%" align="right" alt="cineca_logo"/>
+			<p align="center">ELIXIR-ITA in collaboration with CINECA and Sapienza Università di Roma</p>
+			<br>
+			<p align="center"> Course on: </p>
+		    </td>
+		</tr>		    
+		<tr>
+		    <td>
+			<h3 align="center">{{ course.title }}</h3>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<br>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT DATES</b> for this Course:
+			<br />&nbsp;&nbsp;&nbsp;Deadline for applications: <b>{{ course.deadline }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Course date: <b> {{ course.data }} </b>
+			<p><b>&nbsp;&nbsp;&nbsp;VENUE</b>:
+			<br />&nbsp;&nbsp;&nbsp;Course date: <b> {{ course.venue }} </b>
+			</p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT</b>:
+			<p align="justify">
+			    Candidates with adequate profile will be accepted in the next few days after the application 
+			    until we reach 20 participants. 
+			    <br>Candidates from <b>ELIXIR-ITA member institutions</b> (see the list at the bottom) have the 
+			    priority provided they apply by October the 3rd. 
+			    <br><b>ELIXIR-ITA</b> will cover the expenses for the registration fee, lunches and coffee breaks. 
+			    Participants are expected to pay their travel and accommodation costs.
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Course description</b>:
+			<font size="2">
+			<p align="justify">
+			    This course is aimed at PhD students and post-doctoral researchers who are applying or planning 
+			    to apply high throughput sequencing (HTS) technologies and related bioinformatics methods in their 
+			    research. The aim of this course is to familiarise the participants with data analysis methodologies 
+			    and provide hands-on training on the latest analytical approaches 
+
+			   <p>Lectures will give insight into how biological knowledge can be generated from RNA-seq experiments 
+			    and illustrate different ways of analysing such data. Practicals will consist of computer exercises 
+			    that will enable the participants to apply statistical methods to the analysis of RNA-seq data under 
+			    the guidance of the lecturers and teaching assistants. Participants with no UNIX/Linux experience will 
+			    be provided with basic understanding of the command-line operations on the first day of the course.</p> 
+
+			    <p>The course covers data analysis of RNA-Seq experiments. Topics will include: alignment, data handling 
+			    and visualisation,region identification, differential expression, data quality assessment and statistical analysis.
+		    </td>
+		</tr> 
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Organisers</b>:
+			    <p>Tiziana Castrignan&ograve 
+			    <br> Giovanni Chillemi
+			    <br> Allegra Via
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<b>&nbsp;&nbsp;&nbsp;Instructors</b>:    
+		    </td>
+		</tr>	    
+		<tr>
+		    <td>
+			<img border="0" style="margin:4px" src="{% static "img/elixir_ita_logo.jpg" %}" width="91" align="left">
+			<font size="2">
+			<p align="justify">
+			    <b>Tiziana Castrignan&ograve;</b> 			<br><br>
+			    <b>Affiliation: </b>CINECA, Roma, IT
+			</p>
+			</font>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<img border="0" style="margin:4px" src="{% static "img/chillemi_2015.jpg" %}" width="91" align="left">
+			<font size="2">
+			<p align="justify">
+			    <b>Giovanni Chillemi</b> holds a Master Degree in Chemical Engineering from the Sapienza University 
+			    (Rome, IT) and a PhD in Biochemistry and Molecular Biology from the University of Rome "Tor Vergata". 
+			    From 1997 to 2013 he worked at CASPUR, the computing centre based in Rome (now CINECA) in the 
+			    computational chemistry group, collaborating with the scientists in parallelising and enabling applications 
+			    for computational chemistry, structural biology and computational genomics. Since 2014 he works in the 
+			    CINECA SCAI user support group, collaborating with scientists in enabling HPC applications. He acted as 
+			    external professor at the Department of Biology, University of Rome “Tor Vergata” and at the Department 
+			    of Pharmaceutical Sciences, University of Bologna. In 2014 he obtained the Italian national scientific 
+			    qualification as Associate Professor in "Molecular Biology" and "General and Clinical Biochemistry". 
+    			    <br><br>
+			    <b>Affiliation: </b>CINECA, Roma, IT
+			</p>
+			</font>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<img border="0" style="margin:4px" src="{% static "img/teresa_colombo_2015.png" %}" width="91" align="left">
+			<font size="2">
+			<p align="justify">
+			    <b>Teresa Colombo</b> is a molecular biologist who turned to bioinformatics right after her graduation 
+			    in 2002. She works as bioinformatician at the Phytopathology Lab in the Department of Biotechnology of 
+			    the University of Verona and is a research associate at the Institute for Systems Analysis and Computer 
+			    Science "A. Ruberti" (IASI-CNR). She teaches R programming, Genomics and Bioinformatics at the Sapienza 
+			    University of Rome. Her fields of expertise include cancer genomics, epigenomics, noncoding RNAs, 
+			    microarray and next-generation sequencing data analysis (small and long RNA-Seq, CLIP-Seq) and the 
+			    computational analysis of complex gene networks.			
+			    <br><br>
+			    <b>Affiliation: </b>Universit&agrave; di Verona, Verona, IT
+			</p>
+			</font>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<img border="0" style="margin:4px" src="{% static "img/elixir_ita_logo.jpg" %}" width="91" align="left">
+			<font size="2">
+			<p align="justify">
+			    <b>Fabrizio Ferr&egrave;</b>			
+			    <br><br>
+			    <b>Affiliation: </b>University of Bologna, IT
+			</p>
+			</font>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<img border="0" style="margin:4px" src="{% static "img/allegra_2015.jpg" %}" width="91" align="left">
+			<font size="2">
+			<p align="justify">
+			    <b>Allegra Via</b> is a physicist and scientific researcher in the Biocomputing Unit of Sapienza
+			    Universit&agrave; (Roma, IT) where she also teaches Macromolecular Structure, Python programming, 
+			    Bioinformatics and Biochemistry. Her main research interests include protein structural 
+			    bioinformatics, protein function prediction and analysis, and protein interactions. On top of her research
+			    activities, she is strongly involved in the design, organisation and delivery of bioinformatics training courses. 
+			    She is the Training Coordinator for <b>ELIXIR Italy</b>, 
+			    the <b>ELIXIR.ITA</b> local technical coordinator for Sapienza Universit&agrave;, and a member of the Global 
+			    Organisation for Bioinformatics Learning, Education and Training, <b>GOBLET</b>. 
+			    <br><br>
+			    <b>Affiliation: </b>Sapienza Universit&agrave;, Roma, IT
+			</p>
+			</font>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+		    <div class="course">	
+			<h4><a href="{% url "programme" pk=course.pk %}">Course detailed programme</a></h4>
+		    </div>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Target audience</b>: students and researchers with low or no previous experience in 
+			RNA-seq data analysis with background in biology or computer science who are working or planning to work on RNA-seq.
+			</p>
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Prerequisites</b>: fundamental knowledge on molecular and cellular biology, including basic knowledge of DNA, 
+			genomes, genes, gene regulation, transcription, RNA, translation, gene regulation.
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Learning objectives</b>: Participants in the course will gain familiarity with HTS methodologies and their 
+			different applications in bio-medical research.  Moreover, by attending lectures and practical sessions, 
+			the course participants will be able to perform basic RNA-Seq data analysis  and visualize RNA-Seq data 
+			in genome browser.
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Cancellation policy</b>:  Attendance is limited to 20 participants. We expect many more applications. 
+			Accepted participants commit to attend the course for its whole duration. Failure to attend training sessions 
+			is disruptive. Moreover, it blocks other candidates from participating. Therefore a cancellation policy is in
+			place so that only written requests presented two weeks in advance relatively to the course starting date
+			are accepted. Otherwise, the candidate is short-listed and will not be accepted if and when applying for 
+			the next ELIXIR-ITA course on the same subject. 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<div class="course">	
+			    <h4><a href="{% url "application" pk=course.pk %}">Application</a></h4>
+			</div> 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<font size="4">
+			<p><b>ELIXIR-ITA member institutions</b></p>
+			</font>
+			<p>CNR (ELIXIR-ITA coordinator)
+			<br>CRS4
+			<br>CINECA
+			<br>INFN
+			<br>GARR
+			<br>Sapienza Università di Roma
+			<br>Università di Bari
+			<br>Università di Bologna
+			<br>Università di Milano
+			<br>Università di Milano Bicocca
+			<br>Università di Padova
+			<br>Università di Roma "Tor Vergata"
+			<br>Università della Tuscia
+			
+		    </td>	
+		</tr>
+	</table>
+    </div>
 
 {% endblock content %}
 
 <!--
+            <p><b>{{ course.venue }} - {{ course.data }}</b></p>  
+             
+        </div>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 
-<head>
-<link rel="stylesheet" type="text/css" href="http://gtpb.igc.gulbenkian.pt/bicourses/GTPB2015style.css">
-</link>
-<title>
-GTPB: BPBR15 Bioinformatics using Python for Biomedical Researchers - Home
-</title>
-</head>
-
-<body>
-
-<!-- GTPB header -->
-
-<table width="910" align="center" >
-<tr><td>
-<img src="../images/GTPB2015logo.png" width="890" align="center" >
-</td></tr>
-</table>
-
-	<table width="910" align="center" border="1">
-		<tbody>
-			<tr>
-				<td>
-<br>
-					<font size="6" color="#006400"><b>BPBR15</b></font>
-					<h1>Bioinformatics using Python for Biomedical Researchers</h1>
-
-					<b><a href="./../posters/BPBR15.pdf">Downloadable poster in PDF</a><b><br>
-
-				</td>
-			</tr>
-		</tbody>
-	</table>
-
-</td></tr>
-</table>
 
 <table width="910" align="center">
 <font size="2">

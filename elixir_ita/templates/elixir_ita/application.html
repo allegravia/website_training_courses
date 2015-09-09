@@ -1,6 +1,7 @@
 {% extends "elixir_ita/base.html" %}
 
 {% block content %}
+<div class="table">
 <table width="910" align="center" >
     <tr><td>
 	<h3><b>ELIXIR_ITA course application process:</b></h3>
@@ -21,6 +22,7 @@
 	   </p>
     </td></tr>
 </table>
+</div>
 
 <div class=course>
     <h4><a href="{% url "course_detail" pk=course.pk %}">Course Homepage</a></h4>

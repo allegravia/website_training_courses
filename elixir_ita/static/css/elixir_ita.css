@@ -54,14 +54,20 @@
     font-family: 'Corbel';
 }
 
-.table {
-    color: #000080; 
-    font-family: 'Corbel';
-    font-size: "6"
+.course tr {
+    border: 0.5em 
+    border-color: red; 
 }
 
-table
-th, td {
+.table2 table td {
+    background-color: #FFFFFA;
+    text-align: justify;
+    border: 0em solid;
+    border-color: red; 
+    padding: 3em;
+}
+
+.table table tr td {
     background-color:  #FFFFFA;
     text-decoration: none;
     font-style: normal; 
@@ -85,6 +91,11 @@ td.separator {
     padding: 0em;
 }
 
+tr.separator {
+    border: 0.5em 
+    border-color: red; 
+}
+
 a {
     color: #ff9400;
     font-family: 'Corbel';
@@ -96,6 +107,7 @@ h4 a {
 }
 
 body {
+    background-color: #ADADAD;
     padding-left: 15px;
     font-family: 'Corbel';
 }
