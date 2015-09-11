@@ -4,15 +4,17 @@
     <div class=table2>
         <table width="1000" align="center"> 
 	    <tr><td>
-		{% for course in courses %}
-		    <div class="course">
-			<ul><li>
-			    <h3><a href="{% url "course_detail" pk=course.pk %}">{{ course.title }}</a></h3>
-			    <p><b>{{ course.venue }} - {{ course.data }}</b></p> 
-			    <p>{{ course.text|linebreaks }}</p>    
-			</li></ul>
-		    </div>
-		{% endfor %}
+		<ol>
+		    {% for course in courses %}
+			<div class="course">
+			    <li>
+				<h3><a href="{% url "course_detail" pk=course.pk %}">{{ course.title }}</a></h3>
+				<p><b>{{ course.venue }} - {{ course.data }}</b></p> 
+			        <p>{{ course.text|linebreaks }}</p>    
+			    </li>
+			</div>
+		    {% endfor %}
+		</ol>
 	    </tr></td>
 	</table>
     </div>
