@@ -2,6 +2,10 @@ from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from django.shortcuts import redirect
 from .models import Course
+import os.path
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'elixir_ita/templates/elixir_ita/')
 
 #from django.template import RequestContext
 
@@ -12,9 +16,9 @@ def course_main_page(request):
     return render(request,'elixir_ita/course_main_page.html', {'courses':courses})
 
 def course_detail(request, pk):
-    import os.path
     course = get_object_or_404(Course, pk=pk)
-    if os.path.exists('elixir_ita/templates/elixir_ita/course_detail_'+pk+'.html'):
+    COURSE_HTML = os.path.join(TEMPLATE_DIR,'course_detail_'+pk+'.html') 
+    if os.path.exists(COURSE_HTML):
 	return render(request, 'elixir_ita/course_detail_'+pk+'.html', {'course': course})
     else:
 	return redirect('https://elearning2.uniroma1.it/course/view.php?id=3221') 
