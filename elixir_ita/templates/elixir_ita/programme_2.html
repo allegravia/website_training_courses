@@ -1,390 +1,364 @@
 {% extends "elixir_ita/base.html" %}
 
 {% block content %}
-<div class=table>
+    <div class=table>
     <table width="910" align="center">
         <tr><td>
-        <p><b>{{ course.code }}</b></p></font>
-<p>
-<h1>Bioinformatics using Python for Biomedical Researchers </h1>
-</p>
-<font size="4" color="#006400">
-<b>Timetable (provisional) </b>
-</font>
-</td></tr>
-</table>
+            <h3>{{ course.code }}</h3>
+            <h2>{{ course.title }}</h2>
+            <b>Timetable (provisional) </b>
+        </td></tr>
+    </table>
 
-
-
-<table width="910" align="center">
-
-<tr>
-<td width="130">
-<b>BPBR15</b>
-</td>
-<td width="470">
-<b>Detailed Program</b>
-</td>
-</t r>
-
-<tr >
-<td style="background:#FFCC00">
-<b>Mon, July 20th</b>
-</td>
-<td style="background:#FFCC00">
-<div align="right">
-<b>Getting Started - Day #1</b>
-</div>
-</td>
-</tr>
+    <table width="910" align="center">
+        <tr>
+            <td width="130">
+                <b>{{ course.code }}</b>
+            </td>
+            <td width="470">
+		<b>Detailed Program</b>
+	    </td>
+	</tr>
+	<tr >
+	    <td style="background:#ff9400">
+		<b>Mon, Nov 23rd</b>
+	    </td>
+	    <td style="background:#ff9400">
+                <div align="right">
+		    <b>Sharpening  your  pencils - Day #1</b>
+		</div>
+	    </td>
+	</tr>
 
 <!--Day One program -->
 
-<tr>
-<td>09:30 - 11:00</td>
-<td>
-					Welcome session.  
-					<br>Time to introduce ourselves, and to discover each
-					other's expectations for the coming week.<br>
-					A soft introduction to the working environment.
-				</td>
-</tr>
+	<tr>
+	    <td>09:30 - 10:00</td>
+	    <td>Introduction  to  the  course,  participants  and  instructors</td>
+	</tr>
 
-<tr>
-<td>11:00 - 11:30</td>
-<td style="background:#DCDCDC">
-Coffee Break
-</td>
-</tr>
+	<tr>
+	    <td>10:00 - 11:00</td>
+	    <td>Unix/Linux  command  line</td>
+	</tr>
 
-<tr>
-<td>11:30 - 12:30</td>
-<td>
-Unix (Linux) Tutorial
-</td>
-</tr>
+	<tr>
+	    <td>11:00 - 11:30</td>
+	    <td style="background:#DCDCDC">
+		Coffee Break
+	    </td>
+	</tr>
 
-<tr>
-<td>12:30 - 14:00</td>
-<td style="background:#DCDCDC">
-Lunch Break
-</td>
-</tr>
+	<tr>
+	    <td>11:30 - 13:00</td>
+	    <td>
+		Unix/Linux  command  line  and  introduction  to  R/Bioconductor 
+	    </td>
+	</tr>
 
-<tr>
-<td>14:00 - 16:00</td>
-<td>
-Python Shell
-</td>
-</tr>
+	<tr>
+	    <td>13:00 - 14:00</td>
+	    <td style="background:#DCDCDC">
+		Lunch Break
+	    </td>
+	</tr>
 
+	<tr>
+	    <td>14:00 - 14:30</td>
+	    <td>
+		Game  about  Unix  command  line  and  R
+	    </td>
+	</tr>
+	<tr>
+	    <td>14:30 - 16:00</td>
+	    <td>
+		Introduction  to  essential  programming:  understanding  simple programs  and  building  pipelines 	    </td>
+	</tr>
 
-<tr>
-<td>16:00 - 16:30</td>
-<td style="background:#DCDCDC">
-Tea Break
-</td>
-</tr>
+	<tr>
+	    <td>16:00 - 16:30</td>
+	    <td style="background:#DCDCDC">
+		Tea Break
+	    </td>
+	</tr>
 
-<tr>
-<td>16:30 - 18:00</td>
-<td>
-Python Programs
-</td>
-</tr>
+	<tr>
+	    <td>16:30 - 17:30</td>
+	    <td>Practicing  the  command  line,  R,  and  pipelines</td>
+	</tr>
+
+	<tr>
+	    <td>17:30 - 18:00</td>
+	    <td>Q/A</td>
+	</tr>
 
 <!--   -->
 
-<tr >
-<td style="background:#FFCC00">
-<b>Tue, July 21st</b>
-</td>
-<td style="background:#FFCC00">
-<div align="right">
-<b>Parsing - Day #2</b>
-</div>
-</td>
-</tr>
+	<tr >
+	    <td style="background:#ff9400">
+		<b>Tue, Nov 24th</b>
+	    </td>
+	    <td style="background:#ff9400">
+                <div align="right">
+		    <b>The  ABC  of  NGS - Day #2</b>
+		</div>
+	    </td>
+	</tr>
 
 <!--Day Two program -->
 
-<tr>
-<td>09:30 - 11:00</td>
-<td>
-Morning Wrap-up (what have we done so far?)<br>
-Repeating things
-</td>
-</tr>
+	<tr>
+	    <td>09:30 - 09:45</td>
+	    <td>Recap session</td>
+	</tr>
+	<tr>
+	    <td>09:45 - 11:00</td>
+	    <td>Introduction  to  NGS  technologies and  library preparation</td>
+	</tr>
 
-<tr>
-<td>11:00 - 11:30</td>
-<td style="background:#DCDCDC">
-Coffee Break
-</td>
-</tr>
+	<tr>
+	    <td>11:00 - 11:30</td>
+	    <td style="background:#DCDCDC">
+		Coffee Break
+	    </td>
+	</tr>
 
-<tr>
-<td>11:30 - 12:30</td>
-<td>
-Reading files
-</td>
-</tr>
+	<tr>
+	    <td>11:30 - 13:00</td>
+	    <td>
+		Introduction  to  data  types and  Data  QC (FastQC,  trimmomatic)
+	    </td>
+	</tr>
 
-<tr>
-<td>12:30 - 14:00</td>
-<td style="background:#DCDCDC">
-Lunch Break
-</td>
-</tr>
+	<tr>
+	    <td>13:00 - 14:00</td>
+	    <td style="background:#DCDCDC">
+		Lunch Break
+	    </td>
+	</tr>
 
-<tr>
-<td>14:00 - 16:00</td>
-<td>
-Parsing
-</td>
-</tr>
+	<tr>
+	    <td>14:00 - 15:00</td>
+	    <td>
+                Data  QC  (FastQC,  trimmomatic)
+	    </td>
+	</tr>
+	<tr>
+	    <td>15:00 - 16:00</td>
+	    <td>
+               NGS workflows;  concepts  and  game
+	    </td>
+	</tr>
 
+	<tr>
+	    <td>16:00 - 16:30</td>
+	    <td style="background:#DCDCDC">
+		Tea Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>16:30 - 17:30</td>
+	    <td>
+		Keynote lecture: Vincenza  Colonna  - “NGS  and  population  genomics”
+	    </td>
+	</tr>
 
-<tr>
-<td>16:00 - 16:30</td>
-<td style="background:#DCDCDC">
-Tea Break
-</td>
-</tr>
+	<tr>
+	    <td>17:30 - 18:00</td>
+	    <td>
+		Q/A	
+	    </td>
+	</tr>
 
-<tr>
-<td>16:30 - 18:00</td>
-<td>
-Parsing
-</td>
-</tr>
+<!--   -->
 
-
-<!--    -->
-<tr >
-<td style="background:#FFCC00">
-<b>Wed, July 22nd</b>
-</td>
-<td style="background:#FFCC00">
-<div align="right">
-<b>Managing data - Day #3</b>
-</div>
-</td>
-</tr>
+	<tr >
+	    <td style="background:#ff9400">
+		<b>Wed, Nov 25th</b>
+	    </td>
+	    <td style="background:#ff9400">
+                <div align="right">
+		    <b> Editing  and  polishing  your  draft - Day #3</b>
+		</div>
+	    </td>
+	</tr>
 
 <!--Day Three program -->
-<tr>
-<td>09:30 - 11:00</td>
-<td>
-Morning Wrap-up (what have we done so far?)<br>
-Functions
-</td>
-</tr>
 
-<tr>
-<td>11:00 - 11:30</td>
-<td style="background:#DCDCDC">
-Coffee Break
-</td>
-</tr>
+	<tr>
+	    <td>09:30 - 10:00</td>
+	    <td>Discussion  of  participants’  interests  and  division  in  groups for the mini-projects  on  day  5</td>
+	</tr>
+	<tr>
+	    <td>10:00 - 11:00</td>
+	    <td style="background:#DCDCDC">
+		Alignment  of  paired-end  reads  to  a  reference  genome  (bwa)
+	    </td>
+	</tr>
+	<tr>
+	    <td>11:00 - 11:30</td>
+	    <td style="background:#DCDCDC">
+		Coffee Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>11:30 - 13:00</td>
+	    <td>BAM  refinement  concepts  and  practicals  (samtools,  picard, GATK,  IGV)</td>
+	</tr>
+	<tr>
+	    <td>13:00 - 14:00</td>
+	    <td style="background:#DCDCDC">
+		Lunch Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>14:00 - 16:00</td>
+	    <td>(continue) BAM  refinement  concepts  and  practicals  (samtools,  picard, GATK,  IGV)</td>
+    	</tr>
+	<tr>
+	    <td>16:00 - 16:30</td>
+	    <td style="background:#DCDCDC">
+		Tea Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>16:30 - 17:30</td>
+	    <td>(continue) BAM  refinement  concepts  and  practicals  (samtools,  picard, GATK,  IGV)</td>
+	</tr>
+	<tr>
+	    <td>17:30 - 18:00</td>
+	    <td>
+		Q/A	
+	    </td>
+	</tr>
 
-<tr>
-<td>11:30 - 12:30</td>
-<td>
-Debugging
-</td>
-</tr>
+<!--   -->
 
-<tr>
-<td>12:30 - 14:00</td>
-<td style="background:#DCDCDC">
-Lunch Break
-</td>
-</tr>
-
-<tr>
-<td>14:00 - 16:00</td>
-<td>
-Data columns<br>
-(formatting and sorting)
-</td>
-</tr>
-
-
-<tr>
-<td>16:00 - 16:30</td>
-<td style="background:#DCDCDC">
-Tea Break
-</td>
-</tr>
-
-<tr>
-<td>16:30 - 18:00</td>
-<td>
-Tabular data
-</td>
-</tr>
+	<tr >
+	    <td style="background:#ff9400">
+		<b>Thu, Nov 26th</b>
+	    </td>
+	    <td style="background:#ff9400">
+                <div align="right">
+		    <b>Spot  the  difference - Day #4</b>
+		</div>
+	    </td>
+	</tr>
 
 <!--Day Four program -->
 
-<tr >
-<td style="background:#FFCC00">
-<b>Thu, July 23rd</b>
-</td>
-<td style="background:#FFCC00">
-<div align="right">
-<b>Libraries - Day #4</b>
+	<tr>
+	    <td>09:30 - 10:00</td>
+	    <td>Recap session</td>
+	</tr>
+	<tr>
+	    <td>10:00 - 11:00</td>
+	    <td>Variant  calling  -  SNPs:  concepts  and  practicals  (samtools)</td>
+	</tr>
+	<tr>
+	    <td>11:00 - 11:30</td>
+	    <td style="background:#DCDCDC">
+		Coffee Break
+	    </td>
+	</tr>
+
+	<tr>
+	    <td>11:30 - 13:00</td>
+	    <td>Variant  calling  - structural  variation:  concepts  and  practicals (conifer)</td>
+	</tr>
+	<tr>
+	    <td>13:00 - 14:00</td>
+	    <td style="background:#DCDCDC">
+		Lunch Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>14:00 - 16:00</td>
+            <td>Filtering  variants  (vcftools)</td>
+	</tr>
+	<tr>
+	    <td>16:00 - 16:30</td>
+	    <td style="background:#DCDCDC">
+		Tea Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>16:30 - 17:30</td>
+            <td>Practicing  variant  calling  and  filtering</td>
+	</tr>
+	<tr>
+	    <td>17:30 - 18:00</td>
+	    <td>
+		Q/A	
+	    </td>
+	</tr>
+
+<!--   -->
+
+	<tr >
+	    <td style="background:#ff9400">
+		<b>Fri, Nov 27th</b>
+	    </td>
+	    <td style="background:#ff9400">
+                <div align="right">
+		    <b>Down  to  business - Day #5</b>
+		</div>
+	    </td>
+	</tr>
+
+<!--Day five program -->
+
+	<tr>
+	    <td>09:30 - 10:00</td>
+	    <td>Round table: Description  of  the  group projects</td>
+	</tr>
+	<tr>
+	    <td>10:00 - 11:00</td>
+	    <td>Groups  start  working  on group projects</td>
+	</tr>
+	<tr>
+	    <td>11:00 - 11:30</td>
+	    <td style="background:#DCDCDC">
+		Coffee Break
+	    </td>
+	</tr>
+
+	<tr>
+	    <td>11:30 - 13:00</td>
+	    <td>Group projects  continue</td>
+	</tr>
+	<tr>
+	    <td>13:00 - 14:00</td>
+	    <td style="background:#DCDCDC">
+		Lunch Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>14:00 - 16:00</td>
+	    <td>Group projects  continue</td>
+	</tr>
+	<tr>
+	    <td>16:00 - 16:30</td>
+	    <td style="background:#DCDCDC">
+		Tea Break
+	    </td>
+	</tr>
+	<tr>
+	    <td>16:30 - 17:30</td>
+            <td>Presentation  and  discussion  of group projects’ results</td>
+	</tr>
+	<tr>
+	    <td>17:30 - 18:00</td>
+	    <td>
+		Course  wrap-up  and  feedback	
+	    </td>
+	</tr>
+</table>
+</table>
 </div>
-</td>
-</tr>
 
-
-<tr>
-<td>09:30 - 11:00</td>
-<td>
-Morning Wrap-up (what have we done so far?)<br>
-Searching
-</td>
-</tr>
-
-<tr>
-<td>11:00 - 11:30</td>
-<td style="background:#DCDCDC">
-Coffee Break
-</td>
-</tr>
-
-<tr>
-<td>11:30 - 12:30</td>
-<td>
-Pipelines
-</td>
-</tr>
-
-<tr>
-<td>12:30 - 14:00</td>
-<td style="background:#DCDCDC">
-Lunch Break
-</td>
-</tr>
-
-<br>
-<tr>
-<td>14:00 - 16:00</td>
-<td>
-Python Libraries<br>
-(BioPython, Pattern matching, plotting, using R, Pandas)
-</td>
-</tr>
-
-
-<tr>
-<td>16:00 - 16:30</td>
-<td style="background:#DCDCDC">
-Tea Break
-</td>
-</tr>
-
-<tr>
-<td>16:30 - 18:00</td>
-<td>
-Python Libraries
-</td>
-</tr>
-
-<!--Day Five program -->
-
-<tr >
-<td style="background:#FFCC00">
-<b>Fri, July 24th</b>
-</td>
-<td style="background:#FFCC00">
-<div align="right">
-<b>Hackaton: using Python - Day #5</b>
+<div class=course>
+    <h4><a href="{% url "course_detail" pk=course.pk %}">Course Homepage</a></h4>
 </div>
-</td>
-</tr>
-
-<tr>
-<td>09:30 - 11:00</td>
-<td>
-Morning Wrap-up (what have we done so far?)<br>
-Hackaton I
-</td>
-</tr>
-
-<tr>
-<td>11:00 - 11:30</td>
-<td style="background:#DCDCDC">
-Coffee Break
-</td>
-</tr>
-
-<tr>
-<td>11:30 - 12:30</td>
-<td>
-Hackaton II
-</td>
-</tr>
-
-<tr>
-<td>12:30 - 14:00</td>
-<td style="background:#DCDCDC">
-Lunch Break
-</td>
-</tr>
-
-<tr>
-<td>14:00 - 16:00</td>
-<td>
-Hackaton III
-</td>
-</tr>
-
-
-<tr>
-<td>16:00 - 16:30</td>
-<td style="background:#DCDCDC">
-Tea Break
-</td>
-</tr>
-
-<tr>
-<td>16:30 - 18:00</td>
-<td>
-Outcomes versus expectations<br>
-Final Wrap-up session
-</td>
-</tr>
-
-</table>
-
-
-
-<table width="910" align="center" >
-<tr><td>
-<a href="./index.html">Course Homepage</a>
-</td></tr>
-</table>
-
-
-
-<table width="910" align="center" ">
-<tr><td>
-<p>
-Instituto Gulbenkian de Ci&ecirc;ncia,</p>
-<p>
-Apartado 14, 2781-901 Oeiras, Portugal</p>
-<p><a href="http://gtpb.igc.gulbenkian.pt/bicourses">GTPB Homepage</a></p>
-<p><a href="http://www.igc.gulbenkian.pt">IGC Homepage</a></p>
-<p>Last updated: &nbsp;&nbsp;<i><b>June 3rd 2015</b></i></p>
-</td></tr>
-</table>
-</body>
-
-</html>
-
-
-
 
 {% endblock content %}

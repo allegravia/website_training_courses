@@ -25,7 +25,7 @@ def course_detail(request, pk):
 	
 def application(request, pk):
     course = get_object_or_404(Course, pk=pk)
-    return render(request, 'elixir_ita/application.html', {'course': course})
+    return render(request, 'elixir_ita/application_'+pk+'.html', {'course': course})
 
 def programme(request, pk):
     course = get_object_or_404(Course, pk=pk)
