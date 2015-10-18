@@ -1,0 +1,35 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="table">
+<table width="910" align="center" >
+    <tr><td>
+	<h3><b>RNASeq2015 course materials</b></h3>
+    </td></tr>
+    <tr><td>
+	<div class="course">
+            <ol>
+                <li> 
+		    <a href="{% static "docs/unix.zip" %}">UNIX/Linux command line</a></h4>
+                </li><li>
+		    <a href="{% static "docs/tutorial_UCSC_crea_BED_file_di_una_lista_di_geni_di_interesse.pdf" %}">UCSC_BED_tutorial.pdf</a> 
+                </li><li>
+		    <a href="{% static "docs/tutorial_UCSC_estrai_mappa_di_conversione_identificativi_geni.pdf" %}">UCSC_conversion_map.pdf</a> 
+                </li>
+            </ol>
+	</div>
+    </td></tr>
+    <tr><td>
+        <p><b>IMPORTANT NOTE:</b> <u>Credits to Kristian Rother (Unix tutorial) and Teresa Colombo (UCSC tutorials)</u></b>
+	</p>
+    </td></tr>
+</table>
+</div>
+
+<div class=course>
+    <h4><a href="{% url "course_detail" pk=course.pk %}">Course Homepage</a></h4>
+</div>
+
+{% endblock content %}

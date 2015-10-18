@@ -1,0 +1,29 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="table">
+<table width="910" align="center" >
+    <tr><td>
+	<h3><b>RNASeq2015 course materials</b></h3>
+            <div class="course">
+            <ol>
+                <li> 
+		    <a href="{% url "unix" pk=course.pk %}">UNIX/Linux command line</a></h4>
+		    <a href="{% static "docs/RNASeq2015_application_form.doc" %}"> MS Word</a> or 
+                </li><li>
+		    <a href="{% static "docs/RNASeq2015_application_form.pdf" %}">pdf</a> formats, 
+                </li>
+            </ol>
+	    <p><b>IMPORTANT NOTE:</b> <u>Application e-mails that do not carry the three required documents as attachments will not be considered.</u></b>
+	   </p>
+    </td></tr>
+</table>
+</div>
+
+<div class=course>
+    <h4><a href="{% url "course_detail" pk=course.pk %}">Course Homepage</a></h4>
+</div>
+
+{% endblock content %}
