@@ -6,13 +6,15 @@
 	    <tr><td>
 		<ol>
 		    {% for course in courses %}
-			<div class="course">
-			    <li>
+			{% if course.is_past_due %}
+			    <div class="course">
+				<li>
 				<h3><a href="{% url "course_detail" pk=course.pk %}">{{ course.title }}</a></h3>
 				<p><b>{{ course.venue }} - {{ course.data }}</b></p> 
 			        <p>{{ course.text|linebreaks }}</p>    
-			    </li>
-			</div>
+				</li>
+			    </div>
+			{% endif %}
 		    {% endfor %}
 		</ol>
 	    </tr></td>

@@ -1,0 +1,39 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+<div class="table">
+<table width="910" align="center" >
+    <tr><td>
+	<h3><b>ELIXIR_ITA course application process:</b></h3>
+            <div class="course">
+	    You will need to send us 3 documents in MS Word or PDF formats.
+            <ol>
+                <li> 
+	            Fill an <b>Application form</b> using the template available in 
+		    <a href="{% static "docs/SysBiol2015_application_form.doc" %}"> MS Word</a> or 
+		    <a href="{% static "docs/SysBiol2015_application_form.pdf" %}">pdf</a> formats, 
+		    and save it using your name as part of the file name: Surname_Name_AF_{{ course.code }}.pdf (PDF format preferred)  
+                </li><li>
+	            Prepare a short <b>CV</b> and save it as Surname_Name_CV_{{ course.code }}.pdf (PDF format preferred)
+                </li><li>
+	            Prepare a short, one paragraph, simple <b>Motivation statement</b> such as: <i>"I, (Name surname) 
+		    wish to attend the VarCall2015 training course because..."</i> and save it as 
+		    Surname_Name_MS_{{ course.code }}.pdf (PDF format preferred)
+                </li><li>
+	            Send an e-mail to <b>elixir.ita.training@gmail.com</b> it (subject line: SysBiol2015 Course Bologna)
+		     with the 3 documents in attachment. 
+                </li>
+            </ol>
+	    <p><b>IMPORTANT NOTE:</b> <u>Application e-mails that do not carry the three required documents as attachments will not be considered.</u></b>
+	   </p>
+    </td></tr>
+</table>
+</div>
+
+<div class=course>
+    <h4><a href="{% url "course_detail" pk=course.pk %}">Course Homepage</a></h4>
+</div>
+
+{% endblock content %}

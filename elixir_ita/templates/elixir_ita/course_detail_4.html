@@ -1,0 +1,154 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="table">
+        <table width="910" align="center">
+		<tr>
+		    <td>
+			<img src="{% static "img/elixir_ita_logo.jpg" %}" style="width:10%" alt="elixir_ita_logo"/>
+			<img src="{% static "img/university_bologna_logo.jpg" %}" style="width:10%" align="right" alt="university_bologna_logo"/>
+			<p align="center">ELIXIR-ITA in collaboration with CINECA and Sapienza Università di Roma</p>
+			<br>
+			<p align="center"> Course on: </p>
+		    </td>
+		</tr>		    
+		<tr>
+		    <td>
+			<h3 align="center">{{ course.title }}</h3>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<br>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT DATES</b> for this Course:
+			<br />&nbsp;&nbsp;&nbsp;Deadline for applications: <b>{{ course.deadline }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Course date: <b> {{ course.data }} </b>
+			<p><b>&nbsp;&nbsp;&nbsp;VENUE</b>:
+			<br />&nbsp;&nbsp;&nbsp;{{ course.venue }}
+			</p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT</b>:
+			<p align="justify">
+			    Candidate selection will start on November the 15th and those with an adequate profile will be accepted immediately, especially if they come from other countries (to allow them to find reasonably cheap flight tickets). 
+			    <br>Priority will be given to candidates from <b>ELIXIR-ITA member institutions</b> (see the list 
+			    at the bottom) and ELIXIR nodes.
+			    <br><b>ELIXIR-ITA</b> will cover the expenses for the registration fee, lunches and coffee breaks. 
+			    Participants are expected to pay their travel and accommodation costs.
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Course description</b>:
+			<font size="2">
+			<p align="justify">
+This course is aimed at students in master degree courses, PhD students and post-doctoral researchers who are working or planning to work in the field of protein interactions, protein interaction networks and/or systems biology. The aim of this course is to familiarise the participants with the different approaches to the study of protein-protein interactions (PPIs), protein interaction networks and systems biology. Hands-on training sessions will be provided as well.
+<p>Lectures will give insight into protein interaction and biological network data and illustrate the different ways of analysing them. Different levels of analysis will be discussed, from single molecule interactions to whole networks to systems biology. Biomedical applications will also be presented.
+Practicals will consist of computer exercises that will enable the participants to apply the resources and tools available for the study of protein interactions to the analysis of real data under the guidance of the lecturers and teaching assistants. 
+<p>Topics will include: Data analysis of protein interaction experiments,
+bioinformatics resources and tools to study protein-protein interactions, protein interactions from a molecular, structural and network points of view, PPI data handling and visualisation, biomedical applications.
+		    </td>
+		</tr> 
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Organisers</b>:
+			    <p> Alberto Calderone (Universit&agrave; di Roma "Tor Vergata", IT)
+			    <br>Giuseppe Profiti (Universit&agrave; di Bologna, IT) 
+			    <br> Allegra Via (Sapienza Universit&agrave; di  Roma, IT)
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<b>&nbsp;&nbsp;&nbsp;Keynote Speakers</b>:    
+			<div class="course">	
+			    <h4><a href="{% url "rita_casadio" %}">Rita Casadio (Universit&agrave; di Bologna, IT)</a></h4> 
+			    <h4><a href="{% url "gianni_cesareni" %}">Gianni Cesareni (Universit&agrave; di Roma "Tor Vergata", IT)</a></h4>
+			</div> 
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<b>&nbsp;&nbsp;&nbsp;Instructors</b>:    
+			<div class="course">	
+			    <h4><a href="{% url "alberto_calderone" %}"> Alberto Calderone (Universit&agrave; di Roma "Tor Vergata", IT)</a></h4>
+			    <h4><a href="{% url "piero_fariselli" %}">Piero Fariselli (Universit&agrave; di Bologna, IT)</a></h4> 
+			    <h4><a href="{% url "luana_licata" %}">Luana Licatai (Universit&agrave; di Roma "Tor Vergata", IT)</a></h4>
+			    <h4><a href="{% url "pierluigi_martelli" %}">Pier Luigi Martelli (Universit&agrave; di Bologna, IT)</a></h4> 
+			    <h4><a href="{% url "allegra_via" %}">Allegra Via (Sapienza Universit&agrave; di  Roma, IT)</a></h4>
+			    <h4><a href="{% url "andreas_zanzoni" %}">Andreas Zanzoni (Aix-Marseille University – Inserm, Marseille, FR)</a></h4>
+			</div> 
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Target audience</b>: Students and researchers in any field of bioinformatics with background in biology or computer science but weak or no previous experience in protein interaction prediction, networks and systems biology, who are working or planning to work in this field.  
+			</p>
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Prerequisites</b>: In this course, basic notions of biology and use of computers WILL NOT be provided. Therefore, fundamental knowledge on protein biochemistry and molecular and cellular biology and basic skills on computer usage are prerequisites.
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Learning objectives</b>: Participants in the course will get a general understanding of protein-protein interactions from different perspectives. Both experimentally proven and predicted interactions will be described. Problems of data collection will be introduced in order to make students aware of the importance of having large amount of data for system level analyses. Participants will be also introduced to graph theory and to modelling in systems biology and gain familiarity with a large amount of resources and methodologies for the prediction and analysis of PPIs and protein networks and their different applications in bio-medical research.
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Cancellation policy</b>:  Attendance is limited to 20 participants. We expect many more applications. 
+			Accepted participants commit to attend the course for its whole duration. Failure to attend training sessions 
+			is disruptive. Moreover, it blocks other candidates from participating. Therefore a cancellation policy is in
+			place so that only written requests presented two weeks in advance relatively to the course starting date
+			are accepted. Otherwise, the candidate is short-listed and will not be accepted if and when applying for 
+			the next ELIXIR-ITA course on the same subject. 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<div class="course">	
+			    <h4><a href="{% url "programme" pk=course.pk %}">Course detailed programme</a></h4>
+			    <h4><a href="{% url "application" pk=course.pk %}">Application</a></h4>
+			</div> 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<font size="4">
+			<p><b>ELIXIR-ITA member institutions</b></p>
+			</font>
+			<p>CNR (ELIXIR-ITA coordinator)
+			<br>CRS4
+			<br>CINECA
+			<br>INFN
+			<br>GARR
+			<br>Sapienza Università di Roma
+			<br>Università di Bari
+			<br>Università di Bologna
+			<br>Università di Milano
+			<br>Università di Milano Bicocca
+			<br>Università di Padova
+			<br>Università di Roma "Tor Vergata"
+			<br>Università della Tuscia
+			
+		    </td>	
+		</tr>
+	</table>
+    </div>
+
+
+{% endblock content %}
