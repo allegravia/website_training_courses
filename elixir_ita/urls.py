@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^trainers/alberto_calderone$', views.trainer, {'trainer_name':'alberto_calderone', 'cn':'4'}, name='alberto_calderone'),
     url(r'^trainers/rita_casadio$', views.trainer, {'trainer_name':'rita_casadio', 'cn':'4'}, name='rita_casadio'),
     url(r'^trainers/gianni_cesareni$', views.trainer, {'trainer_name':'gianni_cesareni', 'cn':'4'}, name='gianni_cesareni'),
+    url(r'^trainers/pietro_di_lena$', views.trainer, {'trainer_name':'pietro_di_lena', 'cn':'4'}, name='pietro_di_lena'),
     url(r'^trainers/piero_fariselli$', views.trainer, {'trainer_name':'piero_fariselli', 'cn':'4'}, name='piero_fariselli'),
     url(r'^trainers/luana_licata$', views.trainer, {'trainer_name':'luana_licata', 'cn':'4'}, name='luana_licata'),
     url(r'^trainers/pierluigi_martelli$', views.trainer, {'trainer_name':'pierluigi_martelli', 'cn':'4'}, name='pierluigi_martelli'),
