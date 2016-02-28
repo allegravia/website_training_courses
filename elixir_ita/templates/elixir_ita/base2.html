@@ -26,7 +26,9 @@
 
     </head>
     <body>
-	<div class="table_base">
+<! --
+       <div class="table_base">
+
             <table width="1000" align="center">
                 <tr>
 		    <td>
@@ -41,37 +43,45 @@
 		    </td>
 		</tr>
 	    </table>
-	</div>
-	<div class="bar">
             <table width="1000" align="center">
 		<tr>
 	            <td width="250">
+			<div class="page-header">
 			    <h4><a href="{% url "course_main_page" %}">Courses</a></h4>
+			</div>
 		    </td>
 	            <td width="250">
-		        <h4><a href="{% url "events" %}">Other Events</a></h4>
+			<div class="page-header">
+		        <h4><a href="{% url "course_main_page" %}">Other Events</a></h4>
+			</div>
 		    </td>
 	            <td width="250">
-		        <h4><a href="{% url "trainers_main_page" %}">Trainers</a></h4>
+			<div class="page-header">
+		        <h4><a href="{% url "course_main_page" %}">Trainers</a></h4>
+			</div>
 		    </td>
 	            <td width="250">
-		        <h4><a href="{% url "contacts" %}">Contacts</a></h4>
+			<div class="page-header">
+		        <h4><a href="{% url "course_main_page" %}">Contacts</a></h4>
+			</div>
 		    </td>
 		</tr>
 	    </table>
-	</div>
 
                 {% block content %}
                 {% endblock %}
 
-	<div class="bar">
             <table width="1000" align="center">
 		<tr>
 		    <td>
-			    <a href="http://elaboratest.com/iib/"><b> IIB/ELIXIR-ITA website</b></a>
+			<div class="page-header">
+			    <a href="http://elaboratest.com/iib/"> IIB/ELIXIR-ITA website</a>
+			</div>
 		    </td>
 		</tr>
             </table>
         </div>
+-->
     </body>
 </html>
+

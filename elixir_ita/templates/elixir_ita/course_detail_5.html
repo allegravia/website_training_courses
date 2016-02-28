@@ -1,0 +1,130 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="table">
+        <table width="910" align="center">
+		<tr>
+		    <td>
+			<img src="{% static "img/elixir_ita_logo.jpg" %}" style="width:10%" alt="elixir_ita_logo"/>
+			<p align="center">ELIXIR-ITA, in collaboration with the the Institute of Genetics and Biophysics
+                                          of the National Research Council</p>
+			<br>
+			<p align="center"> Course on: </p>
+		    </td>
+		</tr>		    
+		<tr>
+		    <td>
+			<h3 align="center">{{ course.title }}</h3>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<br>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT DATES</b> for this Course:
+			<br />&nbsp;&nbsp;&nbsp;Deadline for applications: <b>{{ course.deadline }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Course date: <b> {{ course.data }} </b>
+			<p><b>&nbsp;&nbsp;&nbsp;VENUE</b>:
+			<br />&nbsp;&nbsp;&nbsp;{{ course.venue }}
+			</p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT</b>:
+			<p align="justify">
+			    A maximum of 20 candidates will be selected based on their research profile. Notifications of 
+			    acceptance will be sent shortly after the closing date of registration.
+			    <br>Priority will be given to candidates from <b>ELIXIR-ITA member institutions</b> (see the list 
+			    at the bottom) and ELIXIR nodes.
+			    <br><b>ELIXIR-ITA</b> will cover the expenses for the registration fee, lunches and coffee breaks. 
+			    Participants are expected to pay their travel and accommodation costs.
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Course description</b>:
+			<font size="2">
+			<p align="justify">
+                        This course is aimed at PhD students and post-doctoral researchers who are applying, or will apply in the near future, high throughput sequencing technologies and the related bioinformatics tools in their research. The aim of this course is to familiarise the participants with NGS data analysis methodologies and provide hands-on training on the latest approaches. 
+		        <p>Lectures will give insights into how biological knowledge can be generated from next-generation sequencing experiments. Practical training will consist of computer exercises that will enable the participants to apply the latest available tools for NGS data handling and combine them in a real workflow with downstream evolutionary analyses, under the guidance of the lecturers and teaching assistants. 
+			    <p>This course will provide an introduction to next generation sequencing platforms, data analysis and tools for data quality control, <b>including</b> alignment to a reference sequence, data handling and visualisation, and variant calling and filtering (single nucleotide polymorphisms and structural variants). The course will be delivered using a mixture of lectures and computer based <b>hands-on</b> practical sessions, including <b>group</b> projects to be completed by the participants using the knowledge gained at the course. Projects will cover the general topics of population structure and admixture, demographic changes and natural selection.
+			    <p>Participants with limited UNIX/Linux and R/Bioconductor experience will be provided with basic understanding of the command-line operations and the foundations of the R programming language on the first day of the course. Participants with some bioinformatics experience will be asked to help through the first day in order to create the collaborative environment needed for the group projects at the end of the course.
+		    </td>
+		</tr> 
+		<tr>
+		    <td>
+			<b>&nbsp;&nbsp;&nbsp;Organisers and Instructors</b>:    
+			<div class="course">	
+			    <h4><a href="{% url "chiara_batini" %}">Chiara Batini (University of Leicester, UK)</a></h4>
+			    <h4><a href="{% url "vincenza_colonna" %}">Vincenza Colonna (CNR, Napoli, IT)</a></h4>
+			    <h4><a href="{% url "allegra_via" %}">Allegra Via (Sapienza Universit&agrave; di  Roma, IT)</a></h4>
+			</div> 
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Target audience</b>: This course is aimed at wet-lab biologists who are embarking upon research projects that will require the handling and analysis of next generation sequencing data in organisms for which a reference genome is available.
+			</p>
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Prerequisites</b>: A significant proportion of the course will be computer-based using command line tools in the Unix environment, therefore, in order to gain maximum benefit from the course all attendees will be required to have basic Unix skills. This means applicants must at a minimum be able to move easily around the file sytem and make directories (e.g. pwd, cd, ls, mkdir) and manage files (e.g. cp, mv, rm).
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Learning objectives</b>: Participants in the course will gain familiarity with NGS methodologies and their different applications when a reference genome is available. These will cover from alignment to variant calling of both single nucleotide polymorphisms and structural variants. Participants will apply the knowledge gained during the course into a real group project on the last day.
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Cancellation policy</b>:  Attendance is limited to 20 participants. We expect many more applications. 
+			Accepted participants commit to attend the course for its whole duration. Failure to attend training sessions 
+			is disruptive. Moreover, it blocks other candidates from participating. Therefore a cancellation policy is in
+			place so that only written requests presented two weeks in advance relatively to the course starting date
+			are accepted. Otherwise, the candidate is short-listed and will not be accepted if and when applying for 
+			the next ELIXIR-ITA course on the same subject. 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<div class="course">	
+			    <h4><a href="{% url "programme" pk=course.pk %}">Course detailed programme</a></h4>
+			    <h4><a href="{% url "application" pk=course.pk %}">Application</a></h4>
+			</div> 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<font size="4">
+			<p><b>ELIXIR-ITA member institutions</b></p>
+			</font>
+			<p>CNR (ELIXIR-ITA coordinator)
+			<br>CRS4
+			<br>CINECA
+			<br>INFN
+			<br>GARR
+			<br>Sapienza Università di Roma
+			<br>Università di Bari
+			<br>Università di Bologna
+			<br>Università di Milano
+			<br>Università di Milano Bicocca
+			<br>Università di Padova
+			<br>Università di Roma "Tor Vergata"
+			<br>Università della Tuscia
+			
+		    </td>	
+		</tr>
+	</table>
+    </div>
+
+
+{% endblock content %}

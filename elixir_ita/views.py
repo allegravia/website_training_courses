@@ -44,6 +44,15 @@ def unix(request):
     course = get_object_or_404(Course, pk=pk)
     return render(request, 'elixir_ita/unix.html', {'course': course})
 
+def events(request):
+    return render(request, "elixir_ita/events.html") 
+
+def trainers_main_page(request):
+    return render(request, "elixir_ita/trainers_main_page.html") 
+
+def contacts(request):
+    return render(request, "elixir_ita/contacts.html") 
+
 def trainer(request, trainer_name, cn):
     trainer = get_object_or_404(Trainer, pk=trainer_name)
     course = get_object_or_404(Course, pk=cn)

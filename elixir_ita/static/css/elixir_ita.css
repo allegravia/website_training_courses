@@ -1,20 +1,21 @@
 .page-header {
-    background-color: #ff9400;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
-}
+    background-color: #D8D8D8;
+    text-align: center;
+    margin-top: 10;
+    margin-right: 10;
+   }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+.page-header h2, .page-header h2 a, .page-header h2 a:visited, .page-header h2 a:active {
+    color: #38610B;
+    text-align: center;
     font-family: 'Corbel';
-    font-size: 36pt;
+    font-size: 28pt;
     text-decoration: none;
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 20px;
 }
-
 
 .date {
     float: right;
@@ -57,6 +58,58 @@
 .course tr {
     border: 0.5em 
     border-color: red; 
+}
+
+.bar table tr td {
+    background-color:  #A4A4A4;
+    text-align: center;
+}
+
+.bar a {
+    color: #38610B;
+    font-family: 'Corbel';
+    }
+
+.table_base table tr td {
+    background-color:  #D8D8D8;
+    text-align: justify;
+}
+.table_base2 table tr td {
+    background-color:  #D8D8D8;
+    text-decoration: none;
+    font-style: normal; 
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 100%;
+    word-spacing: normal;
+    letter-spacing: normal;
+    vertical-align: top;
+    text-transform: none;
+    text-align: justify;
+    text-indent: 0em;
+    line-height: 120%;
+    border: 0.1em solid;
+    border-color: grey;
+    padding: 0.01em;
+}
+
+.table_home table tr td {
+    background-color:  #FFFFFF;
+    text-decoration: none;
+    font-style: normal; 
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 100%;
+    word-spacing: normal;
+    letter-spacing: normal;
+    vertical-align: top;
+    text-transform: none;
+    text-align: justify;
+    text-indent: 0em;
+    line-height: 120%;
+    border: 0.1em solid;
+    border-color: #ffffff;
+    padding: 0.01em;
 }
 
 .table2 table td {
@@ -107,7 +160,7 @@ h4 a {
 }
 
 body {
-    background-color: #ADADAD;
+    background-color: #FFFFFF;
     padding-left: 15px;
     font-family: 'Corbel';
 }

@@ -18,6 +18,7 @@ class Course(models.Model):
     course_date = models.DateField(blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+    year = models.CharField(max_length=4, null=True)
 
     def is_past_due(self):
         if date.today() < self.course_date:
@@ -39,6 +40,9 @@ class Trainer(models.Model):
     bio = models.TextField(blank=True)
     affiliation = models.CharField(max_length=400, null=True, blank=True)
     photo = models.CharField(max_length=80, null=True, blank=True)
+    contact = models.CharField(max_length=400, null=True, blank=True)
+    course_teach = models.TextField(blank=True)
+    course_organise = models.TextField(blank=True)
 
     def __str__(self):
         return self.name

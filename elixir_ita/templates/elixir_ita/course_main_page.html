@@ -4,8 +4,10 @@
     <div class=table2>
         <table width="1000" align="center"> 
 	    <tr><td>
+	    <h2>2016</h2>
 		<ol>
 		    {% for course in courses %}
+			{% if course.year = "2016" %}	
 			    <div class="course">
 				<li>
 				<h3><a href="{% url "course_detail" pk=course.pk %}">{{ course.title }}</a></h3>
@@ -13,6 +15,21 @@
 			        <p>{{ course.text|linebreaks }}</p>    
 				</li>
 			    </div>
+                        {% endif %}
+		    {% endfor %}
+		</ol>
+	    <h2>2015</h2>
+		<ol>
+		    {% for course in courses %}
+			{% if course.year = "2015" %}	
+			    <div class="course">
+				<li>
+				<h3><a href="{% url "course_detail" pk=course.pk %}">{{ course.title }}</a></h3>
+				<p><b>{{ course.venue }} - {{ course.data }}</b></p> 
+			        <p>{{ course.text|linebreaks }}</p>    
+				</li>
+			    </div>
+                        {% endif %}
 		    {% endfor %}
 		</ol>
 	    </tr></td>
