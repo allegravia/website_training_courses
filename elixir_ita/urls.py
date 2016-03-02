@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^events$', views.events, name='events'),
     url(r'^trainers$', views.trainers_main_page, name='trainers_main_page'),
     url(r'^contacts$', views.contacts, name='contacts'),
+    url(r'^excelerate_ttt$', views.excelerate_ttt, name='excelerate_ttt'),
     url(r'^course/(?P<pk>[0-9]+)/$', views.course_detail, name='course_detail'),
     url(r'^course/(?P<pk>[0-9]+)/application$', views.application, name='application'),
     url(r'^course/(?P<pk>[0-9]+)/programme$', views.programme, name='programme'),
