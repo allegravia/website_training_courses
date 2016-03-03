@@ -56,6 +56,9 @@ def contacts(request):
 def excelerate_ttt(request):
     return render(request, "elixir_ita/excelerate_ttt.html") 
 
+def course_programme_2016(request):
+    return render(request, "elixir_ita/course_programme_2016.html") 
+
 def trainer(request, trainer_name, cn):
     trainer = get_object_or_404(Trainer, pk=trainer_name)
     course = get_object_or_404(Course, pk=cn)
