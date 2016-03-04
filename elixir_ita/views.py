@@ -26,7 +26,10 @@ def course_detail(request, pk):
     if os.path.exists(COURSE_HTML):
 	return render(request, 'elixir_ita/course_detail_'+pk+'.html', {'course': course})
     else:
-	return redirect('https://elearning2.uniroma1.it/course/view.php?id=3221') 
+        if pk == '3':
+	    return redirect('https://elearning2.uniroma1.it/course/view.php?id=3221') 
+        elif pk == '6':
+	    return redirect('http://rnaseqworkshop2016.evosexdevo.eu/') 
 	
 def application(request, pk):
     course = get_object_or_404(Course, pk=pk)
