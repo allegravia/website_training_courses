@@ -17,7 +17,9 @@ def elixir_ita_homepage(request):
     return render(request, 'elixir_ita/elixir_ita_homepage.html')
 
 def course_main_page(request):
-    courses = Course.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
+    courses = Course.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    #if you want the courses published in reverse order, use the following line (and comment the previous one)
+    #courses = Course.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
     return render(request,'elixir_ita/course_main_page.html', {'courses':courses})
 
 def course_detail(request, pk):
@@ -26,10 +28,14 @@ def course_detail(request, pk):
     if os.path.exists(COURSE_HTML):
 	return render(request, 'elixir_ita/course_detail_'+pk+'.html', {'course': course})
     else:
-        if pk == '3':
+        if pk == '3': #NGSBeMM2015
 	    return redirect('https://elearning2.uniroma1.it/course/view.php?id=3221') 
-        elif pk == '6':
+        elif pk == '6':  #RNASeq2016
 	    return redirect('http://rnaseqworkshop2016.evosexdevo.eu/') 
+	elif pk == '7': #HPCMolDyn2016
+            return redirect('http://www.hpc.cineca.it/content/high-performance-molecular-dynamics') 
+	elif pk == '8': #HPCMolDyn2016-PRACE
+            return redirect('https://events.prace-ri.eu/event/416/')
 	
 def application(request, pk):
     course = get_object_or_404(Course, pk=pk)
