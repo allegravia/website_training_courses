@@ -65,6 +65,9 @@ def contacts(request):
 def excelerate_ttt(request):
     return render(request, "elixir_ita/excelerate_ttt.html") 
 
+def ttt_at_bits2016(request):
+    return render(request, "elixir_ita/ttt_at_bits2016.html") 
+
 def course_programme_2016(request):
     return render(request, "elixir_ita/course_programme_2016.html") 
 
