@@ -17,7 +17,8 @@ def elixir_ita_homepage(request):
     return render(request, 'elixir_ita/elixir_ita_homepage.html')
 
 def course_main_page(request):
-    courses = Course.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    courses = Course.objects.filter(published_date__lte=timezone.now()).order_by('course_date')
+    #courses = Course.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     #if you want the courses published in reverse order, use the following line (and comment the previous one)
     #courses = Course.objects.filter(published_date__lte=timezone.now()).order_by('published_date').reverse()
     return render(request,'elixir_ita/course_main_page.html', {'courses':courses})
