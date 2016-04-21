@@ -1,0 +1,130 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="table">
+        <table width="910" align="center">
+		<tr>
+		    <td>
+			<img src="{% static "img/elixir_ita_logo.jpg" %}" style="width:15%" align ="left" alt="elixir_ita_logo"/>`
+			<img src="{% static "img/bits_logo.jpg" %}" style="width:20%" align="right" alt="bits_logo"/>
+			<img src="{% static "img/university_salerno_logo.png" %}" style="width:10%" align="right" alt="university_salerno_logo"/>
+		    </td>
+		</tr>		    
+		    <td>
+			<h4 align="center">ELIXIR-ITA in collaboration with the BITS and the University of Salerno</h4>
+			<br>
+			<p align="center"> Workshop on: </p>
+			<h3 align="center">{{ course.title }}</h3>
+			<br>	
+                        <p align="center"> Learning principles and didactic strategies that will transform your way of delivering bioinformatics courses </p>
+
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<br>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT DATES</b> for this workshop:
+			<br />&nbsp;&nbsp;&nbsp;Deadline for applications: <b>{{ course.deadline }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Last notification for acceptance: <b>{{ course.acceptance }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Course date: <b> {{ course.data }} </b>
+			<p><b>&nbsp;&nbsp;&nbsp;VENUE</b>:
+			<br />&nbsp;&nbsp;&nbsp;{{ course.venue }}
+			<p><b>&nbsp;&nbsp;&nbsp;FEE</b>: Free
+			</p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT</b>:
+			<p align="justify">
+			    <b>ELIXIR-ITA will cover the expenses for the registration fee, lunches and coffee breaks. 
+			    Participants are expected to pay their travel and accommodation costs.</b>
+			    <p>Candidate selection will start on May the 25th and those with an adequate profile will be accepted immediately. 
+			    <br>Priority will be given to candidates from <b>ELIXIR-ITA member institutions</b> (see the list 
+			    at the bottom) and ELIXIR nodes.
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			    <p><a href="{% url "ttt_at_bits2016" %}">&nbsp;&nbsp;&nbsp;<b>Workshop motivation</b></a>
+		    </td>	
+		</tr>
+
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Workshop description</b>:
+			<font size="3">
+			<p align="justify">
+In this workshop, we will provide participants with instructional principles that come directly from cognitive research and the speakers' experience, and their implications for teaching practice. We will then extensively discuss which principles can be easily translated (and how) into teaching strategies and applied into actual courses. Examples of effective teaching techniques already put into action in academic courses will be described.<br>   
+The workshop's main goals are: 1. identify a limited number of techniques that the participants would feel confident to introduce in their bioinformatics academic courses and 2. develop, in a shared effort involving participants and speakers, guidelines with recommendations and concrete actions that can be easily adopted by any lecturer in their courses.<br> 
+The outcomes of the workshop will be shared and discussed during the BITS conference on June the 16th. Finally, on June the 17th at 2 pm  there will be a round table closing the conference to further discuss teaching issues and enroll academic lecturers interested in introducing a few effective techniques in their course (AA 2016/2017). Enrolled participants will be followed up to report outcomes of the "experiment" to the BITS conference in 2017.
+		    </td>
+		</tr> 
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Organisers</b>:
+			    <p> Vincenza Colonna (CNR, Naples, IT)  
+			    <br> Anna Marabotti (University of Salerno, IT)  
+			    <br> Roberto Tagliaferri (University of Salerno, IT)  
+			    <br> Allegra Via (IBBE-CNR, Bari, IT)
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<b>&nbsp;&nbsp;&nbsp;Speakers</b>:    
+			<div class="course">	
+			    <h4><a href="{% url "vincenza_colonna" %}">Vincenza Colonna (CNR, Naples, IT)</a></h4>
+			    <h4><a href="http://www.ebi.ac.uk/about/people/sarah-morgan">Sarah Morgan (EBI, UK)</a></h4>
+			    <h4><a href="http://elixir-uk.org/about-the-node/gabriella-rustici">Gabriella Rustici (University of Cambridge, UK)</a></h4>
+			    <h4><a href="{% url "allegra_via" %}">Allegra Via (IBBE-CNR, Bari, IT)</a></h4>
+			</div> 
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Target audience</b>: Scientists who are involved - or plan to be involved as part of their future career - in academic teaching. 
+			</p>
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<div class="course">	
+			    <h4><a href="{% url "programme" pk=course.pk %}">Workshop detailed programme</a></h4>
+			    <h4><a href="http://goo.gl/forms/5QuVn78dWR">Application form</a></h4>
+			</div> 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<font size="4">
+			<p><b>ELIXIR-ITA member institutions</b></p>
+			</font>
+			<p>CNR (ELIXIR-ITA coordinator)
+			<br>CRS4
+			<br>CINECA
+                        <br>FONDAZIONE EDMUND MACH
+			<br>INFN
+			<br>GARR
+			<br>Sapienza Università di Roma
+			<br>Università di Bari
+			<br>Università di Bologna
+			<br>Università di Firenze
+			<br>Università di Milano
+			<br>Università di Milano Bicocca
+			<br>Università di Padova
+			<br>Università di Parma
+			<br>Università di Salerno 
+			<br>Università di Roma "Tor Vergata"
+			<br>Università della Tuscia
+			
+		    </td>	
+		</tr>
+	</table>
+    </div>
+
+
+{% endblock content %}
