@@ -39,6 +39,7 @@ class Trainer(models.Model):
     keywords = models.CharField(max_length=400, null=True, blank=True)
     bio = models.TextField(blank=True)
     affiliation = models.CharField(max_length=400, null=True, blank=True)
+    website = models.CharField(max_length=400, null=True, blank=True)
     photo = models.CharField(max_length=80, null=True, blank=True)
     contact = models.CharField(max_length=400, null=True, blank=True)
     course_teach = models.TextField(blank=True)
