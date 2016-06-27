@@ -41,7 +41,7 @@ class Trainer(models.Model):
     affiliation = models.CharField(max_length=400, null=True, blank=True)
     photo = models.CharField(max_length=80, null=True, blank=True)
     contact = models.CharField(max_length=400, null=True, blank=True)
-    website = models.CharField(max_length=400, null=True, blank=True)
+    website = models.CharField(max_length=500, null=True, blank=True)
     course_teach = models.TextField(blank=True)
     course_organise = models.TextField(blank=True)
 
