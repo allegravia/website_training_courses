@@ -43,7 +43,6 @@ class Trainer(models.Model):
     contact = models.CharField(max_length=400, null=True, blank=True)
     course_teach = models.TextField(blank=True)
     course_organise = models.TextField(blank=True)
-    website =  models.CharField(max_length=400, null=True, blank=True)
 
     def __str__(self):
         return self.name
