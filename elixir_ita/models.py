@@ -44,20 +44,6 @@ class Trainer(models.Model):
     course_teach = models.TextField(blank=True)
     course_organise = models.TextField(blank=True)
 
-
-class Trainer2(models.Model):
-    author = models.ForeignKey('auth.User')
-    name = models.CharField(max_length=200, null=True)
-    code = models.CharField(max_length=80, primary_key=True, null=False)
-    keywords = models.CharField(max_length=400, null=True, blank=True)
-    bio = models.TextField(blank=True)
-    affiliation = models.CharField(max_length=400, null=True, blank=True)
-    ciccio = models.CharField(max_length=400, null=True, blank=True)
-    photo = models.CharField(max_length=80, null=True, blank=True)
-    contact = models.CharField(max_length=400, null=True, blank=True)
-    course_teach = models.TextField(blank=True)
-    course_organise = models.TextField(blank=True)
-
     def __str__(self):
         return self.name
 
