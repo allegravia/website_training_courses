@@ -15,7 +15,10 @@
 			    <p align="justify">
 			    {{ trainer.bio }}</p>
 			    <b>Affiliation: </b> {{ trainer.affiliation }}<br>
-                            <b>Contact: </b> {{trainer.contact}}
+                            <b>Contact: </b> {{trainer.contact}}<br>
+                            {% if not trainer.website = '' %}
+                                <b>Website:</b> {{trainer.website}}
+                            {% endif %}
 			    </p>
 			</font>
 	       	    </div>

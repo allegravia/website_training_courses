@@ -1,0 +1,169 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="table">
+        <table width="910" align="center">
+		<tr>
+		    <td>
+			<img src="{% static "img/elixir_ita_logo.jpg" %}" style="width:15%" align ="left" alt="elixir_ita_logo"/>`
+			<img src="{% static "img/milano_bicocca_logo.png" %}" style="width:10%" align="right" alt="milano_bicocca_logo"/>
+		    </td>
+		</tr>		    
+		    <td>
+			<h4 align="center">ELIXIR-ITA in collaboration with the University of Milano-Bicocca</h4>
+			<br>
+			<p align="center"> Course on: </p>
+			<h3 align="center">{{ course.title }}</h3>
+			<br>	
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<br>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT DATES</b> for this workshop:
+			<br />&nbsp;&nbsp;&nbsp;Deadline for applications: <b>{{ course.deadline }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Last notification for acceptance: <b>{{ course.acceptance }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Course date: <b> {{ course.data }} </b>
+			<p><b>&nbsp;&nbsp;&nbsp;VENUE</b>:
+			<br />&nbsp;&nbsp;&nbsp;{{ course.venue }}
+			<p><b>&nbsp;&nbsp;&nbsp;FEE</b>: Free
+			</p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>&nbsp;&nbsp;&nbsp;Eligibility</b>:
+			    A maximum of 25 candidates will be selected based on their research profile. Notifications of 
+			    acceptance will be sent shortly after the closing date of registration.
+			    Priority will be given to candidates from <b>ELIXIR-ITA member institutions</b> (see the list 
+			    at the bottom) and ELIXIR nodes.
+			    <br><br>				
+			<b>&nbsp;&nbsp;&nbsp;Expenses</b>:
+			    ELIXIR-ITA will cover the expenses for the registration fee and coffee breaks. 
+			    Lunches have to be covered by the participants, who	are also expected to pay their travel and accommodation costs.
+		            Several bars are available within walking distance from the training room.		
+			    
+			    <br><br>				
+			<b>&nbsp;&nbsp;&nbsp;Equipment</b>:
+			    The participants can work on their laptops. However, workstations will be available in case of need.
+			 </p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Workshop description</b>:
+			<font size="3">
+			<p align="justify">
+Galaxy is an open source, web-based platform for data intensive biomedical research. It makes accessible bioinformatics applications to users lacking programming skills, enabling them to easily build analysis workflows for NGS data.
+This course is aimed at PhD student, biologists, clinicians and researchers who are analysing, or need to analyse in the near future, high throughput exome sequencing data.
+The aim of this course is to make participants familiarise with the Galaxy platform and prepare them to work independently, using state-of-the art tools for the analysis of exome sequencing data.
+The course will be delivered using a mixture of lectures and computer based hands-on practical sessions.
+Lectures will provide an up-to-date overview of the strategies for the analysis of exome next-generation experiments, starting from the raw sequence data. Analyses include sequence quality control, alignment to a reference genome, refinement of aligned sequences, variant calling, annotation and interpretation, and tools for visual inspection of results.
+Participants will apply the knowledge gained during the course to the analysis of Illumina’s real exome datasets, and implement workflows to reproduce the complete analysis.
+After the course, participants will be able to create pipeline for their individual analyses.
+
+
+		    </td>
+		</tr> 
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Organisers</b>:
+                            <ul>
+			    <li>Gianluca Dalla Vedova (Dipartimento di Informatica, Sistemistica e Comunicazione, Università di Milano-Bicocca)</li>
+			    <li>Allegra Via (IBBE-CNR, Bari, IT)</li>
+			    </ul>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<b>&nbsp;&nbsp;&nbsp;Instructors</b>:    
+			<div class="course">	
+			    <h4><a href="{% url "paolo_uva" %}">Paolo Uva (CRS4, Pula, Cagliari, IT)</a></h4>
+			    <h4><a href="{% url "gianmauro_cuccuru" %}">Gianmauro Cuccuru (CRS4, Pula, Cagliari, IT)</a></h4>
+			</div> 
+			<b>&nbsp;&nbsp;&nbsp;co-Instructors</b>:    
+			<div class="course">	
+<!--			    <h4><a href="{% url "giuseppe_profiti" %}">Giuseppe Profiti (Universita di Bologna, Bologna, IT)</a></h4>
+			    <h4><a href="{% url "matteo_chiara" %}">Matteo Chiara (Universita di Milano, Milano, IT)</a></h4>
+-->
+			    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Giuseppe Profiti (Universita di Bologna, Bologna, IT)</h4>
+			    <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Matteo Chiara (Universita di Milano, Milano, IT)</h4>
+			</div> 
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Target audience</b>: PhD students, biologists, clinicians and researchers who are involved in the analysis and interpretation of exome sequencing datasets.
+			</p>
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Course's language</b>: If all participants speak good italian, the course will be held in Italian.
+			</p>
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Prerequisites</b>: The course is based on Galaxy, a web-based platform for the analysis of NGS data. This means analyses will be performed using nothing else than a web browser, therefore there are no prerequisites other than a background in biology and familiarity with web browsers		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Learning objectives</b>: Participants will gain familiarity with the Galaxy platform, and will learn how to analyze exome sequencing data. At the end of the course participants will be prepared to work independently on exome datasets, from raw sequence data to variant annotation and prioritization.		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Cancellation policy</b>:  Attendance is limited to 20 participants. We expect many more applications. 
+			Accepted participants commit to attend the course for its whole duration. Failure to attend training sessions 
+			is disruptive. Moreover, it blocks other candidates from participating. Therefore a cancellation policy is in
+			place so that only written requests presented two weeks in advance relatively to the course starting date
+			are accepted. Violations of the cancellation policy will be a part of the evaluation process to select the partecipants in future ELIXIR-ITA courses.
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<div class="course">	
+			    <h4><a href="{% url "programme" pk=course.pk %}">Workshop detailed programme</a></h4>
+			    <h4><a href="http://goo.gl/forms/5QuVn78dWR">Application form</a></h4>
+			</div> 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<font size="4">
+			<p><b>ELIXIR-ITA member institutions</b></p>
+			</font>
+			<p>CNR (ELIXIR-ITA coordinator)
+			<br>CRS4
+			<br>CINECA
+                        <br>FONDAZIONE EDMUND MACH
+			<br>INFN
+			<br>GARR
+			<br>Sapienza Università di Roma
+			<br>Università di Bari
+			<br>Università di Bologna
+			<br>Università di Firenze
+			<br>Università di Milano
+			<br>Università di Milano Bicocca
+			<br>Università di Padova
+			<br>Università di Parma
+			<br>Università di Salerno 
+			<br>Università di Roma "Tor Vergata"
+			<br>Università della Tuscia
+			
+		    </td>	
+		</tr>
+	</table>
+    </div>
+
+
+{% endblock content %}
