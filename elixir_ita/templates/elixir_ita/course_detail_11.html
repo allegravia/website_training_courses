@@ -1,0 +1,162 @@
+{% extends "elixir_ita/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="table">
+        <table width="910" align="center">
+		<tr>
+		    <td>
+			<img src="{% static "img/elixir_ita_logo.jpg" %}" style="width:15%" align ="left" alt="elixir_ita_logo"/>`
+			<img src="{% static "img/university_bari_logo.jpg" %}" style="width:10%" align="right" alt="bari_university_logo"/>
+		    </td>
+		</tr>		    
+		    <td>
+			<h4 align="center">ELIXIR-ITA in collaboration with the University of Bari</h4>
+			<br>
+			<p align="center"> Course on: </p>
+			<h3 align="center">{{ course.title }}</h3>
+			<br>	
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<br>
+			<p><b>&nbsp;&nbsp;&nbsp;IMPORTANT DATES</b> for this workshop:
+			<br />&nbsp;&nbsp;&nbsp;Deadline for applications: <b>{{ course.deadline }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Last notification for acceptance: <b>{{ course.acceptance }}</b>
+			<br />&nbsp;&nbsp;&nbsp;Course date: <b> {{ course.data }} </b>
+			<p><b>&nbsp;&nbsp;&nbsp;VENUE</b>:
+			<br />&nbsp;&nbsp;&nbsp;{{ course.venue }}
+			<p><b>&nbsp;&nbsp;&nbsp;FEE</b>: Free
+			</p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>&nbsp;&nbsp;&nbsp;Eligibility</b>:
+                            A maximum of 20 candidates will be selected based on their research profile. Notifications of acceptance will be sent shortly after the application until we reach 20 participants. Priority will be given to candidates from ELIXIR-ITA member institutions (see the list at the bottom) and ELIXIR nodes.
+			    <br><br>				
+			<b>&nbsp;&nbsp;&nbsp;Expenses</b>:
+			    ELIXIR-ITA will cover the expenses for the registration fee, coffee breaks and lunches. 
+			    The participants are expected to cover their travel and accommodation costs.
+			    <br><br>				
+			<b>&nbsp;&nbsp;&nbsp;Equipment</b>:
+			    Workstations will be available for all participants.
+			 </p>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Workshop description</b>:
+			<font size="3">
+			<p align="justify">
+Python is an object-oriented programming language that is ideal for biological data analysis. The course will start from zero knowledge, and will introduce the participants to all the basic concepts of Python such as calculating, organizing data, reading and writing files, program logic and writing larger programs. All the examples and practical sessions will focus on solving biological problems. In particular the sessions will cover:
+                <ol>
+	 	<li>working with DNA and protein sequences
+		<li>data retrieval from files and their manipulation
+		<li>running applications, such as BLAST, locally and from a script
+		<li>finding motifs in sequence
+		<li>parsing common file formats (Uniprot, GenBank, PDB)
+		<li>ways to find and correct program errors
+                </ol>
+The course will be highly interactive and the students will continuously put theory into practice while learning. Basic Unix/Linux skills will be provided at the beginning of the course. 
+		    </td>
+		</tr> 
+		<tr>
+		    <td>
+			<p><b>&nbsp;&nbsp;&nbsp;Local Organiser</b>:
+                            <ul>
+
+			    <li><a href="">Ernesto Picardi</a> (Dept of Biosciences, Biotechnology and Biopharmaceutics, University of Bari, IT)</li>
+			    </ul>
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<b>&nbsp;&nbsp;&nbsp;Organisers and Instructors</b>:    
+			<div class="course">	
+			    <h4><a href="{% url "vincenza_colonna" %}">Vincenza Colonna (CNR, Naples, IT)</a></h4>
+			    <h4><a href="{% url "allegra_via" %}">Allegra Via(IBBE-CNR, Bari, IT)</a></h4>
+			</div> 
+		    </td>
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Target audience</b>: End-users of bioinformatics databases and tools that aim at developing hands-on capabilities for biological data analysis, ie writing their own or adapting somebody else's Python scripts in an autonomous way. 
+			</p>
+		    </td>	
+		</tr>
+
+<!--
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Course's language</b>: If all participants may speak Italian fluently, the course can be held in Italian.
+			</p>
+		    </td>	
+		</tr>
+--!>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Prerequisites</b>: Basic familiarity with bioinformatics data resources such as Uniprot/Swiss-Prot, Blast, ENSEMBL, PDB, etc. The course is directed to biologists with little or no programming experience and aims at making them capable to use Python to autonomously manage and analyse biological data.  
+                    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Learning outcomes</b>: By the end of the course, the participants will have a good understanding of the Python basics and will have acquired the skills to manage any type of bioinformatics database record, to manipulate data files and tables, and to run applications from scripts. 		    
+                    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<p align="justify">
+			<b>Cancellation policy</b>:  Attendance is limited to 20 participants. We expect many more applications. 
+			Accepted participants commit to attend the course for its whole duration. Failure to attend training sessions 
+			is disruptive. Moreover, it blocks other candidates from participating. Therefore a cancellation policy is in
+			place so that only written requests presented two weeks in advance relatively to the course starting date
+			are accepted. Violations of the cancellation policy will be a part of the evaluation process to select the partecipants in future ELIXIR-ITA courses.
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<div class="course">	
+			    <h4><a href="{% url "programme" pk=course.pk %}">Workshop detailed programme</a></h4>
+			    <h4><a href="http://goo.gl/forms/Xhm4UVJUEX5MKKVl2">Application form</a></h4>
+			</div> 
+		    </td>	
+		</tr>
+		<tr>
+		    <td>
+			<font size="4">
+			<p><b>ELIXIR-ITA member institutions</b></p>
+			</font>
+			<p>CNR (ELIXIR-ITA coordinator)
+			<br>CRS4
+			<br>CINECA
+                        <br>FONDAZIONE EDMUND MACH
+			<br>INFN
+			<br>GARR
+			<br>Sapienza Università di Roma
+			<br>Università di Bari
+			<br>Università di Bologna
+			<br>Università di Firenze
+			<br>Università di Milano
+			<br>Università di Milano-Bicocca
+			<br>Università di Padova
+			<br>Università di Parma
+			<br>Università di Salerno 
+			<br>Università di Roma "Tor Vergata"
+			<br>Università della Tuscia
+			
+		    </td>	
+		</tr>
+	</table>
+    </div>
+
+
+{% endblock content %}
