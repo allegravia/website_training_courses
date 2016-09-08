@@ -37,6 +37,11 @@ def course_detail(request, pk):
             return redirect('http://www.hpc.cineca.it/content/high-performance-molecular-dynamics') 
 	elif pk == '8': #HPCMolDyn2016-PRACE
             return redirect('https://events.prace-ri.eu/event/416/')
+        elif pk == '12': #NETTAB2016:
+            return redirect('http://www.igst.it/nettab/2016/')
+        elif pk == '13': #NETTAB2016:
+            return redirect('http://www.igst.it/nettab/2016/programme/tutorials/')
+
 	
 def application(request, pk):
     course = get_object_or_404(Course, pk=pk)
